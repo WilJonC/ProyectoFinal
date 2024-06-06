@@ -1,27 +1,22 @@
 .app-container {
   background: linear-gradient(to right, #2c3e50, #4ca1af);
-  /* Fondo degradado */
+  /* FONDO DEGRADADO */
   min-height: 100vh;
-  /* Asegúrate de que el fondo cubra toda la altura de la ventana */
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  /* Color de texto */
 }
 
 .card {
-  background-color: #fff;
-  /* Fondo blanco para las cards */
+  background-color: #f8ebd0ef;
+  /* FONDO PARA LAS CARDS */
   color: #333;
-  /* Color del texto dentro de las cards */
   border-radius: 10px;
-  /* Esquinas redondeadas */
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: none;
   background: linear-gradient(to bottom, #d69a9a, #f8f9fa);
-  /* Oculta cualquier contenido que se salga del borde redondeado */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -32,36 +27,30 @@
 
 .card-body {
   padding: 15px;
-  /* Espaciado interno */
 }
 
 .card-title {
   font-weight: bold;
   color: #000000;
-  /* Título en negrita */
 }
 
 .card img {
   border-bottom: 1px solid #ddd;
   transition: transform 0.3s ease-in-out;
-  /* Línea divisoria */
 }
 
 .card:hover img {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen ligeramente al hacer hover */
+  transform: scale(1.1); /* SE AUMENTA EL TAMAÑO DE LA IMAGEN DEL ARMA */
 }
 
 .btn-group {
   display: flex;
   justify-content: space-between;
-  /* Espacio entre los botones */
 }
 
 .btn-group .btn {
   flex: 1;
-  /* Ambos botones tienen el mismo tamaño */
   margin: 5px;
-  /* Separación entre los botones */
 }
 
 .btn-warning {
@@ -74,8 +63,8 @@
 }
 
 .btn {
-  border-radius: 5px; /* Botones con bordes redondeados */
-  font-weight: bold; /* Texto en negrita para los botones */
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .btn-primary {
@@ -98,11 +87,11 @@
   border-color: #bd2130;
 }
 .blurred {
-  filter: blur(8px); /* Aplica un desenfoque de 5px */
+  filter: blur(8px);
 }
 
 .trivia-modal {
-  z-index: 1050; /* Asegúrate de que es superior al del overlay */
+  z-index: 1050;
 }
 
 .overlay {
@@ -111,7 +100,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Opacidad negra */
-  z-index: 1040; /* Menor que la modal pero mayor que el contenido */
-  display: none; /* Oculto por defecto */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  display: none;
 }

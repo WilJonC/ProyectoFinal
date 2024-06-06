@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 function TriviaModal({ weapons, onClose }) {
     const [currentWeapon, setCurrentWeapon] = useState(null);
-    const [answeredCorrectly, setAnsweredCorrectly] = useState(new Set()); // Almacena los UUIDs de las armas respondidas correctamente
+    const [answeredCorrectly, setAnsweredCorrectly] = useState(new Set()); // PARA ALMACENAR LOS UUIDS DE LAS ARMAS
 
     useEffect(() => {
         selectRandomWeapon();
@@ -34,7 +34,7 @@ function TriviaModal({ weapons, onClose }) {
             Swal.fire('Incorrecto', 'Respuesta incorrecta. Inténtalo de nuevo.', 'error');
         }
     }
-
+        // CREAMOS LA VENTANA MODAL
     return (
         <Modal show={true} onHide={onClose} centered>
             <Modal.Header closeButton>

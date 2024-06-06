@@ -3,9 +3,9 @@ import { fetchWeapons } from '../api/valorantApi';
 import { Modal, Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import TriviaModal from './TriviaModal';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap para estilos
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa Font Awesome para iconos
-import './WeaponList.css'; // Importa estilos personalizados
+import 'bootstrap/dist/css/bootstrap.min.css'; // BOOTSTRAP
+import '@fortawesome/fontawesome-free/css/all.min.css'; // USAMOS ICONOS QUE NO SEAN DE BOOTSTRAP
+import './WeaponList.css';
 
 function WeaponList({ searchTerm, searchInitiated }) {
     const [weapons, setWeapons] = useState([]);
@@ -15,7 +15,7 @@ function WeaponList({ searchTerm, searchInitiated }) {
     const [showTriviaButton, setShowTriviaButton] = useState(false);
     const [showTriviaModal, setShowTriviaModal] = useState(false);
 
-    // Cargar armas desde localStorage al iniciar
+    // SE CARGAN LAS ARMAS DESDE EL LOCALSTORAGE
     useEffect(() => {
         const savedWeapons = localStorage.getItem('weapons');
         const savedSearchCount = localStorage.getItem('searchCount');
@@ -23,7 +23,7 @@ function WeaponList({ searchTerm, searchInitiated }) {
         if (savedWeapons) {
             const weaponsArray = JSON.parse(savedWeapons);
             setWeapons(weaponsArray);
-            setSearchCount(weaponsArray.length); // Establece el contador basado en el número de armas guardadas
+            setSearchCount(weaponsArray.length); 
         }
     
         if (savedSearchCount) {
@@ -35,14 +35,14 @@ function WeaponList({ searchTerm, searchInitiated }) {
     }, []);
     
 
-    // Guardar armas en localStorage cada vez que cambian
+    //  SE GUARDAN LOS CAMBIOS DE ARMAS DESDE EL LOCALSTORAGE
     useEffect(() => {
         if (weapons.length > 0) {
             localStorage.setItem('weapons', JSON.stringify(weapons));
         }
         localStorage.setItem('searchCount', JSON.stringify(searchCount));
     }, [weapons, searchCount]);
-    // Manejar búsqueda y actualizar listado de armas
+    // BUSQUEDA Y MANEJAR EL LISTADO DE LAS ARMAS
     useEffect(() => {
         if (searchInitiated && searchTerm.trim() !== '') {
             fetchWeapons().then(data => {
@@ -59,7 +59,7 @@ function WeaponList({ searchTerm, searchInitiated }) {
         }
     }, [searchInitiated, searchTerm]);
 
-    // Mostrar botón de trivia si hay al menos 3 armas listadas
+    // MOSTRAR EL BOTON DE TRIVIA SOLO SI HAN HABIDO 3 BUSQUEDAS DE ARMAS
     useEffect(() => {
     if (searchCount >= 3) {
         setShowTriviaButton(true);
@@ -103,14 +103,14 @@ function WeaponList({ searchTerm, searchInitiated }) {
 
     const handleStartTrivia = () => {
         setShowTriviaModal(true);
-        document.getElementById('main-content').classList.add('blurred'); // Añadir desenfoque
-        document.getElementById('overlay').style.display = 'block'; // Mostrar overlay
+        document.getElementById('main-content').classList.add('blurred'); // DESENFOQUE DEL FONDO EN LA VENTANA MODAL
+        document.getElementById('overlay').style.display = 'block'; 
     };
     
     const handleCloseTrivia = () => {
         setShowTriviaModal(false);
-        document.getElementById('main-content').classList.remove('blurred'); // Quitar desenfoque
-        document.getElementById('overlay').style.display = 'none'; // Ocultar overlay
+        document.getElementById('main-content').classList.remove('blurred'); // QUITAMOS EL DESENFOQUE
+        document.getElementById('overlay').style.display = 'none'; 
     };
     
 

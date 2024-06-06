@@ -1,9 +1,9 @@
 .app-container {
-  background-image: url('Valorant.gif'); /* Cambia esto por la URL o ruta local de tu GIF */
-  background-size: cover; /* Cubrir toda la pantalla */
-  background-position: center; /* Centrar el fondo */
-  background-repeat: no-repeat; /* No repetir el fondo */
-  min-height: 100vh; /* Asegúrate de que el fondo cubra toda la altura de la ventana */
+  background-image: url('Valorant.gif'); /* COLOCAMOS EL GIF DE LA UI */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,31 +11,31 @@
 
   
   .card {
-    background-color: #fff; /* Fondo blanco para las cards */
-    color: #333; /* Color del texto dentro de las cards */
-    border-radius: 10px; /* Esquinas redondeadas */
-    overflow: hidden; /* Oculta cualquier contenido que se salga del borde redondeado */
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
   }
   
   .card-body {
-    padding: 15px; /* Espaciado interno */
+    padding: 15px;
   }
   
   .card-title {
-    font-weight: bold; /* Título en negrita */
+    font-weight: bold;
   }
   
   .card img {
-    border-bottom: 1px solid #ddd; /* Línea divisoria */
+    border-bottom: 1px solid #000000;
   }
   
   .btn-group {
     display: flex;
-    justify-content: space-between; /* Espacio entre los botones */
+    justify-content: space-between;
   }
   
   .btn-group .btn {
-    flex: 1; /* Ambos botones tienen el mismo tamaño */
-    margin: 5px; /* Separación entre los botones */
+    flex: 1; 
+    margin: 5px;
   }
   

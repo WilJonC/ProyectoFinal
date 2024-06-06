@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Importar Font Awesome
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import WeaponList from './components/WeaponList';
-import './App.css'; // Importa el archivo de estilos personalizados
+import './App.css';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -11,7 +11,7 @@ function App() {
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    setSearchInitiated(false);  // Resetear la búsqueda si se borra el input
+    setSearchInitiated(false);  // RESETEAMOS LA BUSQUEDA SI SE BORRA EL CONTENIDO DEL INPUT
   };
 
   const performSearch = () => {
@@ -40,7 +40,7 @@ function App() {
           </div>
           <Routes>
             <Route path="/" element={<WeaponList searchTerm={searchTerm} searchInitiated={searchInitiated} />} />
-            {/* Puedes agregar más rutas si es necesario */}
+            {/* ¡DE MOMENTO NO AGREGARÉ MÁS! */}
           </Routes>
         </div>
       </div>
